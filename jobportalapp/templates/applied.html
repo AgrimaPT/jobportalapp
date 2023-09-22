@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body{
+          background-image:url(https://d12oja0ew7x0i8.cloudfront.net/images/news/ImageForNews_58416_16463184739088911.jpg) ;
+          background-repeat: no-repeat;
+          background-size:cover;
+          position: relative;
+          
+          
+        }
+    </style>
+    {% load static %}
+</head>
+<body>
+    <div style="text-align: center;color: antiquewhite;padding-top: 50px;padding-bottom: 50px;">
+        {% for i,j in list %}
+        <h3>{{i}}</h3>
+        <h3>{{j}}</h3>
+        {% endfor %}
+    </div>
+    
+    <div class="container">
+        {% block content %}
+        <div class="row " >
+           {% for i in l %} 
+            <p>{{i}}</p>
+            <!-- <p>{{i.dsg}}</p> -->
+            <div class="col-4" style="margin-bottom: 50px;">
+                <div class="card" style="margin:0 auto; width: 18rem;background-color: rgb(195, 199, 224);border-color: antiquewhite;border-width: 2px;">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>  
+                        
+                    </div>
+                </div>
+            </div>
+        {% endfor %}  
+        </div>
+        {% endblock %}
+    </div>
+</body>
+</html>

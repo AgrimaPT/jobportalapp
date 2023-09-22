@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        body{
+          background-image:url(https://d12oja0ew7x0i8.cloudfront.net/images/news/ImageForNews_58416_16463184739088911.jpg) ;
+          background-repeat: no-repeat;
+          background-size:cover;
+          position: relative;
+          height: 600px;
+          
+        }
+      </style>
+</head>
+<body >
+    <div style="text-align: center;color: antiquewhite;padding-top: 50px;">
+        <h3>Registered companies</h3>
+    </div>
+    <div style="margin: 50px;" >
+        {% for i in obj %}
+        <div class="card" style="width: 18rem;margin:0 auto;margin-bottom: 10px;text-align: center;border-color: antiquewhite;background-color: rgb(195, 199, 224);border-width: 2px;">
+            <div class="card-body">
+            <h5 class="card-title">{{i.user.username}}</h5>
+            <p class="card-text">{{i.user.email}}</p>
+            <a href="#" class="btn btn-secondary">Contact</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
